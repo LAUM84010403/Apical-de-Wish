@@ -1,0 +1,104 @@
+
+.container1 {
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+    flex: 1; /* L'image occupe tout l'espace disponible à gauche */
+    text-align: center; /* Centre l'image horizontalement */
+}
+
+.icon-container {
+    flex: 1; /* La div des icônes occupe tout l'espace disponible à droite */
+    text-align: right; /* Aligne les icônes à droite */
+}
+
+/* Styles pour les icônes (vous devrez inclure les styles réels de vos icônes) */
+.icon-container .fa {
+    margin: 5px;
+    font-size: 24px;
+}
+
+
+
+body {
+    background-image: url('media/bg.jpg'); 
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.content {
+    margin: 30px auto;
+    width: 80%;
+    max-width: 1200px; 
+    padding: 40px; 
+    background-color: aliceblue;
+}
+
+.sidebar {
+    background-color: white;
+    height: 80px; 
+    margin: 0;
+    left: 0; 
+    right: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centre verticalement la liste et son contenu */
+    align-items: center; /* Centre horizontalement la liste et son contenu */
+}
+
+.horizontal-list {
+    list-style: none; 
+}
+
+.horizontal-list li {
+    display: inline-block;
+    margin-right: 65px; /* Marge entre les éléments li */
+}
+
+
+
+
+p{
+    color: red;
+}
+
+footer {
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    margin: 0; 
+    padding: 0px;
+    width: 100%;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+}
+
+.footer-item {
+    text-align: center; /* Centre le texte à l'intérieur de chaque div */
+    margin: 10px 0; /* Marge verticale entre les div */
+    max-height: 25%; /* Réduit la hauteur maximale des div à 100px */
+}
+
+button {
+    border: 1px solid #b0aeae; /* Contour gris clair */
+    background: linear-gradient(to bottom, #fff, #adadad); /* Dégradé de blanc à gris clair */
+    color: #333; /* Couleur du texte par défaut (gris foncé) */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    transition: background-color 0.3s, color 0.3s; /* Transition pour l'effet de survol */
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #adadad, #fff); /* Inversion des couleurs au survol */
+    color: #383838; /* Couleur du texte au survol (gris légèrement plus clair) */
+}
+
+
