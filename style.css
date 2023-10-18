@@ -21962,3 +21962,26 @@ input[type=checkbox].valeurbd::after,input[type=checkbox].valeurlocale::after {
     }
 }
 
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125)
+}
+
+
+
+
+.icon-container .fa {
+    cursor: pointer; /* Ajoute un curseur pointeur au survol des icônes */
+}
+
+.div-ouverte {
+    display: none;
+    width: 200px;
+    background-color: #5e9ed6;
+    margin-top: 10px;
+    padding: 10px;
+}
+
