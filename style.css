@@ -5,12 +5,11 @@
  */
 body {
     font-family: Lora;
-    background: linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url('../apical-de-wish/media/bg.jpg'); 
+    background: linear-gradient(rgba(47,23,15,.65),rgba(47,23,15,.65)),url("media/bg.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover
 }
-
 
 h1,h2,h3,h4,h5,h6 {
     font-family: Raleway
@@ -4406,6 +4405,7 @@ select {
     word-wrap: normal
 }
 
+
 [type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled) {
     cursor: pointer
 }
@@ -4454,11 +4454,10 @@ progress {
 
 [type=search] {
     outline-offset: -2px;
+
 }
 
-[type=search]::-webkit-search-decoration {
-    -webkit-appearance: none
-}
+
 
 ::-webkit-file-upload-button {
     font: inherit;
@@ -18901,6 +18900,7 @@ html {
     font-weight: 400!important;
     font-variant: normal!important;
     text-transform: none!important;
+
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
@@ -18912,6 +18912,7 @@ html {
     font-weight: 400!important;
     font-variant: normal!important;
     text-transform: none!important;
+
     line-height: 1;
     vertical-align: middle;
     -webkit-font-smoothing: antialiased;
@@ -19477,7 +19478,7 @@ h3 .aideformulaire {
 
 body {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    background: url('../apical-de-wish/media/bg.jpg') center/cover no-repeat fixed;
+    background: url(media/bg.jpg) center/cover no-repeat fixed;
     font-size: 16px
 }
 
@@ -21411,6 +21412,7 @@ label.libelleradio {
 }
 
 select.readonly {
+
     text-indent: 1px;
     color: #333;
     position: relative;
@@ -21567,7 +21569,6 @@ div.wiki ul {
 }
 
 input[type=range] {
-
     border: 1px solid #ededed;
     border-radius: 3px;
     width: 80%;
@@ -21961,27 +21962,3 @@ input[type=checkbox].valeurbd::after,input[type=checkbox].valeurlocale::after {
         width:1080px
     }
 }
-
-.list-group-item {
-    position: relative;
-    display: block;
-    padding: .75rem 1.25rem;
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,.125)
-}
-
-
-
-
-.icon-container .fa {
-    cursor: pointer; /* Ajoute un curseur pointeur au survol des icônes */
-}
-
-.div-ouverte {
-    display: none;
-    width: 200px;
-    background-color: #5e9ed6;
-    margin-top: 10px;
-    padding: 10px;
-}
-
