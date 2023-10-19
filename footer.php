@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">Conception et développement de la plateforme : <span class="auteur"><a href="https://christianelagace.com" target="_blank">Christiane Lagacé</a></span></div>
-                    <div class="col text-center">Conception et développement de la plateforme : <span class="auteur"><a href="https://maximelaurin.com" target="_blank">Maxime Laurin</a></span></div>
+                    <div class="col text-center">Reproduction du site en thème Wordpress : <span class="auteur"><a href="https://maximelaurin.com" target="_blank">Maxime Laurin</a></span></div>
             </div>
         </div>
         <div class="container">
@@ -105,40 +105,36 @@
 </div>
 
 
-    <span class="boutonrefermer"></span>
-    </div>
-    <div class="popupchristiane" id="popupbienvenue"></div>
-    
+<span class="boutonrefermer"></span>
+</div>
+<div class="popupchristiane" id="popupbienvenue"></div>
 
-    
-    
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    
-    <script src="https://apical.xyz/js/jquery.js?id=6a07da9fae934baf3f749e876bbfdd96"></script>
-    <script src="https://apical.xyz/js/bootstrap.js?id=01dce07671c51d0027f56de26689e9b0"></script>
-    <script src="https://apical.xyz/js/app.js?id=f287b5ddc55a704da9893905227c6dae"></script>
-    <script src="https://apical.xyz/js/all.js?id=26fedb11c6e507a092e1b090a994d303"></script>
 
-    <script>
-        $(function () {
-            $('.reinitialiserCookiesMenuFormations').click(function (event) {
-                event.preventDefault();
-                var jqxhr = $.get("https://apical.xyz/reinitialiserCookiesMenuFormations")
-                    .done(function (response, textStatus, jqXHR) {
-                        $('.consulterecemment').remove();
-                        afficherPopupInformation('La liste des dernières formations consultées a été réinitialisée avec succès !');
-                    })
-                    .fail(function (jqXHR, textStatus, errorThrown) {
-                        afficherPopupErreur('Un problème empêche la réinitialisation de la liste des dernières formations consultées.');
-                    });
-            });
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+<script src="https://apical.xyz/js/jquery.js?id=6a07da9fae934baf3f749e876bbfdd96"></script>
+<script src="https://apical.xyz/js/bootstrap.js?id=01dce07671c51d0027f56de26689e9b0"></script>
+<script src="https://apical.xyz/js/app.js?id=f287b5ddc55a704da9893905227c6dae"></script>
+<script src="https://apical.xyz/js/all.js?id=26fedb11c6e507a092e1b090a994d303"></script>
+
+<script>
+    $(function () {
+        $('.reinitialiserCookiesMenuFormations').click(function (event) {
+            event.preventDefault();
+            var jqxhr = $.get("https://apical.xyz/reinitialiserCookiesMenuFormations")
+                .done(function (response, textStatus, jqXHR) {
+                    $('.consulterecemment').remove();
+                    afficherPopupInformation('La liste des dernières formations consultées a été réinitialisée avec succès !');
+                })
+                .fail(function (jqXHR, textStatus, errorThrown) {
+                    afficherPopupErreur('Un problème empêche la réinitialisation de la liste des dernières formations consultées.');
+                });
         });
-    </script>
+    });
+</script>
 
-    
-    <div id="cookie-consent-banner" class="cookie-consent-banner">
+
+<div id="cookie-consent-banner" class="cookie-consent-banner">
     <h3>Nous utilisons des cookies, qu'en pensez-vous?</h3>
     <button id="btn-accept-all" class="cookie-consent-button btn-success">J'accepte tout</button>
     <button id="btn-accept-some" class="cookie-consent-button btn-outline">Seulement ceux cochés</button>
@@ -158,9 +154,9 @@
         document.getElementById('cookie-consent-banner').style.display = 'none';
     }
 
-    if(localStorage.getItem('consentMode') === null) {
+    if (localStorage.getItem('consentMode') === null) {
 
-        document.getElementById('btn-accept-all').addEventListener('click', function() {
+        document.getElementById('btn-accept-all').addEventListener('click', function () {
             setConsent({
                 necessary: true,
                 analytics: true,
@@ -169,7 +165,7 @@
             });
             hideBanner();
         });
-        document.getElementById('btn-accept-some').addEventListener('click', function() {
+        document.getElementById('btn-accept-some').addEventListener('click', function () {
             setConsent({
                 necessary: true,
                 analytics: document.getElementById('consent-analytics').checked,
@@ -178,7 +174,7 @@
             });
             hideBanner();
         });
-        document.getElementById('btn-reject-all').addEventListener('click', function() {
+        document.getElementById('btn-reject-all').addEventListener('click', function () {
             setConsent({
                 necessary: false,
                 analytics: false,
@@ -203,8 +199,8 @@
     }
 
 </script>
-    <script>
-    $(function() {
+<script>
+    $(function () {
 
         // *********************************************************************************************
         // *** Drag'n drop *****************************************************************************
@@ -214,7 +210,7 @@
         $('#dragchapitres').sortable({
             handle: $('.glisser'),
             cursor: 'move',
-            update: function(event, ui) {
+            update: function (event, ui) {
                 var chapitresNouvelOrdre = $(this).sortable('serialize');    // chaîne au format "dragchapitre[]=10&dragchapitre[]=8&dragchapitre[]=9"
 
                 $.ajax({
@@ -228,7 +224,7 @@
         // **************************************************************************************************
         // *** Génération de la liste des fiches de tous les chapitres lorsqu'on clique sur Tout développer *
         // **************************************************************************************************
-        $("#chapitresformation #developperreduire").click(function() {
+        $("#chapitresformation #developperreduire").click(function () {
             // s'il y a une balise avec la classe encoursdegeneration dans un panel-body, c'est que la liste complète n'a pas été générée
             // if ($('#chapitresformation .panel-group .encoursdegeneration').length) {   // la classe panel-group n'a pas d'équivalent en Bootstrap 4...
             if ($('#chapitresformation .encoursdegeneration').length) {
@@ -243,7 +239,7 @@
         // *** Génération de la liste des fiches d'un chapitre lorsqu'on clique sur son titre  *********
         // *********************************************************************************************
         // les balises ont été générées par ajax donc pas existantes sur le document.ready
-        $(document).on('click', '#chapitresformation .card-header a[data-toggle="collapse"]', function(event) {
+        $(document).on('click', '#chapitresformation .card-header a[data-toggle="collapse"]', function (event) {
             // retrouve le card-body (anciennement panel-body) qui contient le chapitre_id et où la liste sera affichée
             // en remontant au panel puis en redescendant sur le panel-body qui est au même niveau que le panel-heading qui contient le lien
             var $panelbody = $(this).parents('.card:first').find('.card-body:first');

@@ -21962,3 +21962,12 @@ input[type=checkbox].valeurbd::after,input[type=checkbox].valeurlocale::after {
         width:1080px
     }
 }
+
+.list-group-item:hover{
+    cursor: pointer;
+}
+
+.titrealigneboutons:hover{
+    cursor: pointer;
+    color:#003eff
+}
